@@ -1,0 +1,761 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0b0b20;
+    color: #ffffff;
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+:root {
+    --roxo: #a43cff;
+    --roxo-claro: #c17aff;
+    --azul: #171747;
+    --fundo: #0b0b20;
+    --borda: #7542c9;
+    --texto: #eeeeff;
+    --verde: #55d65c;
+}
+
+header {
+    height: 85px;
+    padding: 0 5%;
+    background-color: #09091b;
+    border-bottom: 3px solid var(--roxo);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 17px;
+    color: white;
+}
+
+.logo span {
+    color: var(--roxo);
+}
+
+.controle {
+    color: #ffcc45;
+    margin-right: 8px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+nav a {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 9px;
+    color: #dedcfb;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: var(--roxo-claro);
+    transform: translateY(-3px);
+}
+
+.hero {
+    min-height: 390px;
+    padding: 65px 10% 100px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #101039;
+
+    background-image:
+        radial-gradient(circle, #ffffff 1px, transparent 2px),
+        radial-gradient(circle, #a43cff 1px, transparent 2px),
+        linear-gradient(180deg, #101039, #171752);
+
+    background-size:
+        75px 75px,
+        113px 113px,
+        100% 100%;
+
+    background-position:
+        10px 15px,
+        40px 30px,
+        center;
+}
+
+.hero-conteudo {
+    max-width: 600px;
+    position: relative;
+    z-index: 3;
+}
+
+.categoria {
+    font-family: 'Press Start 2P', cursive;
+    color: #f9ce59;
+    font-size: 9px;
+    line-height: 2;
+}
+
+.hero h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 30px;
+    line-height: 1.9;
+    margin: 20px 0;
+    text-shadow: 4px 4px #6322a8;
+}
+
+.hero h1 span {
+    color: var(--roxo-claro);
+}
+
+.hero-conteudo p {
+    max-width: 480px;
+    font-size: 17px;
+    color: #d2d2f2;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.botao {
+    display: inline-block;
+    background-color: var(--roxo);
+    color: #10091c;
+    border: 4px solid #e0baff;
+    box-shadow: 5px 5px 0 #4c1688;
+    padding: 15px 20px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    transition: 0.2s;
+}
+
+.botao:hover {
+    transform: translate(3px, 3px);
+    box-shadow: 2px 2px 0 #4c1688;
+    background-color: #c17aff;
+}
+
+.hero-arte {
+    width: 350px;
+    height: 260px;
+    position: relative;
+    z-index: 2;
+}
+
+.letras-pixel {
+    position: absolute;
+    top: 30px;
+    left: 15px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 110px;
+    color: white;
+    text-shadow:
+        8px 8px 0 #6727bd,
+        12px 12px 0 #32116d;
+    transform: rotate(-5deg);
+}
+
+.lua {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    background: #ffe58b;
+    right: 20px;
+    top: 0;
+
+    box-shadow:
+        12px 0 #ffe58b,
+        -12px 0 #ffe58b,
+        0 12px #ffe58b,
+        0 -12px #ffe58b,
+        12px 12px #ffe58b,
+        -12px -12px #ffe58b,
+        12px -12px #ffe58b,
+        -12px 12px #ffe58b;
+}
+
+.estrela {
+    position: absolute;
+    color: #fff2a1;
+    font-size: 28px;
+}
+
+.estrela1 {
+    top: 10px;
+    left: 5px;
+}
+
+.estrela2 {
+    top: 130px;
+    right: 5px;
+}
+
+.estrela3 {
+    bottom: 20px;
+    left: 100px;
+}
+
+.nuvem {
+    position: absolute;
+    width: 65px;
+    height: 20px;
+    background-color: #6556c5;
+
+    box-shadow:
+        15px -15px #6556c5,
+        30px -15px #6556c5,
+        45px 0 #6556c5,
+        60px 0 #6556c5,
+        15px 15px #6556c5,
+        30px 15px #6556c5,
+        45px 15px #6556c5;
+}
+
+.nuvem1 {
+    top: 35px;
+    left: -50px;
+}
+
+.nuvem2 {
+    bottom: 40px;
+    right: 0;
+    transform: scale(0.7);
+}
+
+.cenario {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 43px;
+    background-color: #693c2e;
+    border-top: 10px solid #50c84e;
+    z-index: 4;
+
+    background-image:
+        linear-gradient(90deg, transparent 50%, #583024 50%),
+        linear-gradient(#965637 50%, #603327 50%);
+
+    background-size: 28px 28px, 45px 25px;
+}
+
+.grama {
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    top: -15px;
+    background: repeating-linear-gradient(
+        90deg,
+        #51d957 0px,
+        #51d957 25px,
+        #36a83f 25px,
+        #36a83f 50px
+    );
+}
+
+.arvore {
+    position: absolute;
+    bottom: 30px;
+    left: 3%;
+    width: 70px;
+    height: 100px;
+}
+
+.copa {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background: #46c95b;
+    top: 0;
+    left: 15px;
+
+    box-shadow:
+        -15px 15px #46c95b,
+        15px 15px #46c95b,
+        -25px 30px #46c95b,
+        25px 30px #46c95b,
+        0 30px #46c95b,
+        -15px 45px #299e46,
+        15px 45px #299e46;
+}
+
+.tronco {
+    position: absolute;
+    width: 18px;
+    height: 35px;
+    background: #8b4c29;
+    bottom: 0;
+    left: 24px;
+}
+
+.bau {
+    position: absolute;
+    width: 65px;
+    height: 55px;
+    bottom: 20px;
+    right: 7%;
+}
+
+.bau-tampa {
+    position: absolute;
+    top: 0;
+    width: 65px;
+    height: 18px;
+    background: #f2a52c;
+    border: 5px solid #6b3719;
+}
+
+.bau-corpo {
+    position: absolute;
+    bottom: 0;
+    width: 65px;
+    height: 37px;
+    background: #c87923;
+    border: 5px solid #6b3719;
+}
+
+.bau-fechadura {
+    position: absolute;
+    width: 12px;
+    height: 15px;
+    background: #ffdf65;
+    left: 26px;
+    top: 20px;
+    border: 3px solid #754117;
+}
+
+main {
+    max-width: 1150px;
+    margin: auto;
+    padding: 65px 25px;
+}
+
+.titulo-secao {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+.etiqueta {
+    font-family: 'Press Start 2P', cursive;
+    color: #bd80ff;
+    font-size: 9px;
+    line-height: 2;
+}
+
+.titulo-secao h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 19px;
+    margin-top: 15px;
+    line-height: 1.8;
+}
+
+.contador {
+    color: #a7a4c6;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 8px;
+}
+
+.fonte-card {
+    background-color: #15152f;
+    border: 3px solid var(--borda);
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 6px 6px 0 #080817;
+    position: relative;
+    transition: 0.2s;
+}
+
+.fonte-card:hover {
+    transform: translateY(-5px);
+    border-color: #d18aff;
+}
+
+.card-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 18px;
+    border-bottom: 2px dashed #47416e;
+    color: #aaa7d2;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 8px;
+    gap: 10px;
+}
+
+.tipo {
+    color: #e0baff;
+}
+
+.amostra {
+    min-height: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    border-bottom: 2px solid #47416e;
+    gap: 12px;
+}
+
+.amostra h3 {
+    font-size: 48px;
+}
+
+.letras {
+    font-size: 23px;
+    color: #c7c4e9;
+    letter-spacing: 3px;
+}
+
+.card-conteudo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 25px 0;
+}
+
+.descricao h4 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.descricao p {
+    color: #c1bfdc;
+    font-size: 15px;
+    line-height: 1.8;
+    max-width: 420px;
+}
+
+.legenda {
+    display: block;
+    color: #a49fca;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 8px;
+    margin-bottom: 18px;
+    line-height: 1.8;
+}
+
+.exemplos p {
+    margin-bottom: 12px;
+}
+
+.normal {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.negrito {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.grande {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.pequeno {
+    font-size: 11px;
+}
+
+.italico {
+    font-style: italic;
+}
+
+.montserrat {
+    border-color: #a43cff;
+}
+
+.montserrat .amostra,
+.montserrat .card-conteudo {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.montserrat .amostra h3 {
+    font-weight: 800;
+}
+
+.dmsans {
+    border-color: #36bca1;
+}
+
+.dmsans .amostra,
+.dmsans .card-conteudo {
+    font-family: 'DM Sans', sans-serif;
+}
+
+.dmsans .amostra h3 {
+    font-weight: 700;
+}
+
+.pixel {
+    border-color: #e8a83d;
+}
+
+.pixel .amostra,
+.pixel .card-conteudo {
+    font-family: 'Press Start 2P', cursive;
+}
+
+.pixel .amostra h3 {
+    font-size: 23px;
+    line-height: 2;
+}
+
+.pixel .letras {
+    font-size: 12px;
+    letter-spacing: 0;
+}
+
+.pixel .descricao h4 {
+    font-size: 11px;
+    line-height: 2;
+}
+
+.pixel .descricao p {
+    font-size: 9px;
+    line-height: 2.2;
+}
+
+.pixel .exemplos p {
+    font-size: 9px;
+    line-height: 2;
+}
+
+.pixel .grande {
+    font-size: 13px;
+}
+
+.pixel .pequeno {
+    font-size: 7px;
+}
+
+.pixel .legenda {
+    font-size: 7px;
+}
+
+.card-rodape {
+    border-top: 2px dashed #47416e;
+    padding-top: 18px;
+    display: flex;
+    justify-content: space-between;
+    color: #a9a5c9;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 8px;
+    gap: 10px;
+}
+
+.sobre {
+    background-color: #131333;
+    border-top: 3px solid #7542c9;
+    padding: 70px 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+}
+
+.sobre h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 19px;
+    line-height: 2;
+    margin: 20px 0;
+}
+
+.sobre-texto p {
+    color: #c1bfdc;
+    line-height: 1.9;
+    font-size: 15px;
+}
+
+.sobre-texto strong {
+    color: #c17aff;
+}
+
+.codigo {
+    background-color: #09091b;
+    border: 3px solid #7542c9;
+    box-shadow: 6px 6px 0 #070711;
+}
+
+.codigo-topo {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 2px solid #7542c9;
+    color: #c17aff;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 8px;
+    gap: 10px;
+}
+
+.codigo pre {
+    padding: 20px;
+    white-space: pre-wrap;
+    color: #a7e6a2;
+    font-family: monospace;
+    font-size: 13px;
+    line-height: 2;
+}
+
+footer {
+    padding: 35px 7%;
+    background-color: #080817;
+    border-top: 3px solid #7542c9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+footer p {
+    font-family: 'Press Start 2P', cursive;
+    color: #b8a8e8;
+    font-size: 8px;
+    line-height: 2;
+}
+
+footer > span {
+    color: #77749b;
+    font-size: 9px;
+}
+
+@media (max-width: 850px) {
+
+    .hero {
+        padding: 60px 7% 100px;
+    }
+
+    .hero-arte {
+        width: 230px;
+        transform: scale(0.8);
+    }
+
+    .hero h1 {
+        font-size: 23px;
+    }
+
+    .card-conteudo {
+        gap: 25px;
+    }
+
+    .sobre {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-wrap: wrap;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    header {
+        height: auto;
+        min-height: 85px;
+        padding: 20px;
+        flex-direction: column;
+        gap: 22px;
+    }
+
+    .logo {
+        font-size: 14px;
+    }
+
+    nav {
+        gap: 18px;
+    }
+
+    nav a {
+        font-size: 7px;
+    }
+
+    .hero {
+        padding: 55px 25px 110px;
+        text-align: center;
+    }
+
+    .hero-arte {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 18px;
+        line-height: 2.2;
+    }
+
+    .hero-conteudo p {
+        font-size: 14px;
+    }
+
+    .categoria {
+        font-size: 7px;
+    }
+
+    .botao {
+        font-size: 8px;
+    }
+
+    .titulo-secao {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .titulo-secao h2 {
+        font-size: 13px;
+    }
+
+    .contador {
+        font-size: 7px;
+    }
+
+    .card-conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .amostra h3 {
+        font-size: 35px;
+    }
+
+    .pixel .amostra h3 {
+        font-size: 16px;
+    }
+
+    .card-topo {
+        font-size: 7px;
+    }
+
+    .card-rodape {
+        font-size: 6px;
+    }
+
+    .sobre {
+        padding: 55px 25px;
+    }
+
+    .sobre h2 {
+        font-size: 13px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
